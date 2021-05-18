@@ -12,7 +12,7 @@ with open(movies_path, 'r') as raw_json:
 @app.route('/')
 def index():
  return render_template('index.html')
-
+#edit
 @app.route('/about')
 def about():
  return '<h1>About</h1><p>some other content</p>'
