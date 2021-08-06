@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>HOMEPAGE</title>
+					<style>
+                        .menu-bar {
+                          border-radius: 25px;
+                          height: -webkit-fit-content;
+                          height: -moz-fit-content;
+                          height: fit-content;
+                          display: inline-flex;
+                          background-color: rgba(0, 0, 0, 0.4);
+                          -webkit-backdrop-filter: blur(10px);
+                          backdrop-filter: blur(10px);
+                          align-items: center;
+                          padding: 0 10px;
+                          margin: 50px 0 0 0;
+                        }
+                        .menu-bar li {
+                          list-style: none;
+                          color: white;
+                          font-family: sans-serif;
+                          font-weight: bold;
+                          padding: 12px 16px;
+                          margin: 0 8px;
+                          position: relative;
+                          cursor: pointer;
+                          white-space: nowrap;
+                        }
+                        .menu-bar li::before {
+                          content: " ";
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          height: 100%;
+                          width: 100%;
+                          z-index: -1;
+                          transition: 0.2s;
+                          border-radius: 25px;
+                        }
+                        .menu-bar li:hover {
+                          color: black;
+                        }
+                        .menu-bar li:hover::before {
+                          background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+                          box-shadow: 0px 3px 20px 0px black;
+                          transform: scale(1.2);
+                        }
+                        * {
+                        box-sizing: border-box;
+                        }
+ 
+                        /* Add a gray background color with some padding */
+                        body {
+                          font-family: Arial;
+                          padding: 20px;
+                          background: #f1f1f1;
+                        }
+ 
+                        /* Header/Blog Title */
+                        .header {
+                          padding: 30px;
+                          font-size: 40px;
+                          text-align: center;
+                          background: white;
+                        }
+ 
+                        /* Create two unequal columns that floats next to each other */
+                        /* Left column */
+                        .leftcolumn {   
+                          float: left;
+                          width: 75%;
+                        }
+ 
+                        /* Right column */
+                        .rightcolumn {
+                          float: left;
+                          width: 25%;
+                          padding-left: 20px;
+                        }
+ 
+                        /* Fake image */
+                        .fakeimg {
+                          background-color: #aaa;
+                          width: 100%;
+                          padding: 20px;
+                        }
+ 
+                        /* Add a card effect for articles */
+                        .card {
+                           background-color: white;
+                           padding: 20px;
+                           margin-top: 20px;
+                        }
+ 
+                        /* Clear floats after the columns */
+                        .row:after {
+                          content: "";
+                          display: table;
+                          clear: both;
+                        }
+ 
+                        /* Footer */
+                        .footer {
+                          padding: 20px;
+                          text-align: center;
+                          background: #ddd;
+                          margin-top: 20px;
+                        }
+ 
+                        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+                        @media screen and (max-width: 800px) {
+                          .leftcolumn, .rightcolumn {   
+                            width: 100%;
+                            padding: 0;
+                          }
+                        }
+					</style>
+          <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+				</head>
+ 
+				<body>
+				
+<br><br><br><br><br>
+<center>
+ <div style="background-color: grey; width: 50%; border-radius: 4px;">
+  <br>
+  {% if "A change password email has been sent to" in info %}
+    {{ info }}
+    <br><br>
+    <a href="/"> Login </a>
+    <br>
+  {% else %}
+  <label for="email_input">{{ info }}</label>
+  <input type="email" required name="email" id="email_input" placeholder="Your Email">
+ 
+  <br><br>
+ 
+  <input onclick="sendEmail()" type="submit"><br>
+  {%endif%}
+  <br>
+</div>
+</center>
+ 
+ 
+  <!--
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div> --> 
+ 
+<script>
+ 
+  function sendEmail() {
+    var email = $("#email_input").val();
+    window.location = "/ForgotPassword/" + email
+  }
+ 
+</script>
+ 
+
+				</body>
+			</html>

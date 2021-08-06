@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+          </head>
+  <style>
+    .nav-link{
+      color: #c3b18c;
+    }
+    .nav-link:hover{
+      color: #b8a785;
+    }
+    .tooly{
+      display: none;
+    }
+    .nav-link:hover .tooly{
+      display: block
+    }
+    @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+position: relative;
+width: 36px;
+font-size: 24px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+font-size: 0.75rem;
+position: absolute;
+right: 0;
+font-family: sans-serif;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+top: 3px;
+line-height: 12px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+top: -10px;
+}
+
+@media (min-width: 576px) {
+.navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link {
+text-align: center;
+display: table-cell;
+height: 70px;
+vertical-align: middle;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+.navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa {
+display: block;
+width: 48px;
+margin: 2px auto 4px auto;
+top: 0;
+line-height: 24px;
+}
+
+.navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
+top: -7px;
+}
+}
+
+@media (min-width: 768px) {
+.navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
+text-align: center;
+display: table-cell;
+height: 70px;
+vertical-align: middle;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+.navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa {
+display: block;
+width: 48px;
+margin: 2px auto 4px auto;
+top: 0;
+line-height: 24px;
+}
+
+.navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa > .badge {
+top: -7px;
+}
+}
+
+@media (min-width: 992px) {
+.navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
+text-align: center;
+display: table-cell;
+height: 70px;
+vertical-align: middle;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+.navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
+display: block;
+width: 48px;
+margin: 2px auto 4px auto;
+top: 0;
+line-height: 24px;
+}
+
+.navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa > .badge {
+top: -7px;
+}
+}
+
+@media (min-width: 1200px) {
+.navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link {
+text-align: center;
+display: table-cell;
+height: 70px;
+vertical-align: middle;
+padding-top: 0;
+padding-bottom: 0;
+}
+
+.navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa {
+display: block;
+width: 48px;
+margin: 2px auto 4px auto;
+top: 0;
+line-height: 24px;
+}
+
+.navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
+top: -7px;
+
+}
+}
+    body{
+    background-color: #f4f7f6;
+    margin-top:20px;
+}
+.card {
+    background: #fff;
+    transition: .5s;
+    border: 0;
+    margin-bottom: 30px;
+    border-radius: .55rem;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+}
+.chat-app .people-list {
+    width: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    z-index: 7
+}
+
+.chat-app .chat {
+    margin-left: 280px;
+    border-left: 1px solid #eaeaea
+}
+
+.people-list {
+    -moz-transition: .5s;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.people-list .chat-list li {
+    padding: 10px 15px;
+    list-style: none;
+    border-radius: 3px
+}
+
+.people-list .chat-list li:hover {
+    background: #efefef;
+    cursor: pointer
+}
+
+.people-list .chat-list li.active {
+    background: #efefef
+}
+
+.people-list .chat-list li .name {
+    font-size: 15px
+}
+
+.people-list .chat-list img {
+    width: 45px;
+    border-radius: 50%
+}
+
+.people-list img {
+    float: left;
+    border-radius: 50%
+}
+
+.people-list .about {
+    float: left;
+    padding-left: 8px
+}
+
+.people-list .status {
+    color: #999;
+    font-size: 13px
+}
+
+.chat .chat-header {
+    padding: 15px 20px;
+    border-bottom: 2px solid #f4f7f6
+}
+
+.chat .chat-header img {
+    float: left;
+    border-radius: 40px;
+    width: 40px
+}
+
+.chat .chat-header .chat-about {
+    float: left;
+    padding-left: 10px
+}
+
+.chat .chat-history {
+    padding: 20px;
+    border-bottom: 2px solid #fff
+}
+
+.chat .chat-history ul {
+    padding: 0
+}
+
+.chat .chat-history ul li {
+    list-style: none;
+    margin-bottom: 30px
+}
+
+.chat .chat-history ul li:last-child {
+    margin-bottom: 0px
+}
+
+.chat .chat-history .message-data {
+    margin-bottom: 15px
+}
+
+.chat .chat-history .message-data img {
+    border-radius: 40px;
+    width: 40px
+}
+
+.chat .chat-history .message-data-time {
+    color: #434651;
+    padding-left: 6px
+}
+
+.chat .chat-history .message {
+    color: #444;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    display: inline-block;
+    position: relative
+}
+
+.chat .chat-history .message:after {
+    bottom: 100%;
+    left: 7%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px
+}
+
+.chat .chat-history .my-message {
+    background: #efefef
+}
+
+.chat .chat-history .my-message:after {
+    bottom: 100%;
+    left: 30px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #efefef;
+    border-width: 10px;
+    margin-left: -10px
+}
+
+.chat .chat-history .other-message {
+    background: #e8f1f3;
+    text-align: right
+}
+
+.chat .chat-history .other-message:after {
+    border-bottom-color: #e8f1f3;
+    left: 93%
+}
+
+.chat .chat-message {
+    padding: 20px
+}
+
+.online,
+.offline,
+.me {
+    margin-right: 2px;
+    font-size: 8px;
+    vertical-align: middle
+}
+
+.online {
+    color: #86c541
+}
+
+.offline {
+    color: #e47297
+}
+
+.me {
+    color: #1d8ecd
+}
+
+.float-right {
+    float: right
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0
+}
+.menu-bar {
+                        border-radius: 25px;
+                        height: -webkit-fit-content;
+                        height: -moz-fit-content;
+                        height: fit-content;
+                        display: inline-flex;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                        align-items: center;
+                        padding: 0 10px;
+                        margin: 50px 0 0 0;
+                      }
+                      .menu-bar li {
+                        list-style: none;
+                        color: white;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                        padding: 12px 16px;
+                        margin: 0 8px;
+                        position: relative;
+                        cursor: pointer;
+                        white-space: nowrap;
+                      }
+                      .menu-bar li::before {
+                        content: " ";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        z-index: -1;
+                        transition: 0.2s;
+                        border-radius: 25px;
+                      }
+                      .menu-bar li:hover {
+                        color: black;
+                      }
+                      .menu-bar li:hover::before {
+                        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+                        box-shadow: 0px 3px 20px 0px black;
+                        transform: scale(1.2);
+                      }
+                      * {
+                      box-sizing: border-box;
+                      }
+
+@media only screen and (max-width: 767px) {
+    .chat-app .people-list {
+        height: 465px;
+        width: 100%;
+        overflow-x: auto;
+        background: #fff;
+        left: -400px;
+        display: none
+    }
+    .chat-app .people-list.open {
+        left: 0
+    }
+    .chat-app .chat {
+        margin: 0
+    }
+    .chat-app .chat .chat-header {
+        border-radius: 0.55rem 0.55rem 0 0
+    }
+    .chat-app .chat-history {
+        height: 300px;
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .chat-app .chat-list {
+        height: 650px;
+        overflow-x: auto
+    }
+    .chat-app .chat-history {
+        height: 600px;
+        overflow-x: auto
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    .chat-app .chat-list {
+        height: 480px;
+        overflow-x: auto
+    }
+    .chat-app .chat-history {
+        height: calc(100vh - 350px);
+        overflow-x: auto
+    }
+}
+</style>
+
+<body>
+    <nav class="navbar navbar-icon-top navbar-expand-lg" style="background-color: white; position:fixed; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; height: 7%; width: 100%; left: 0; top: 0;">
+        <a style="color: #c3b18c;" class="navbar-brand" href="#">&nbsp; Hoots<img src="https://1000logos.net/wp-content/uploads/2017/08/OVO-Logo.png" height=50px></a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">
+                <i class="fa fa-home"></i>
+                <div class="tooly">Home</div>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/friends">
+                <i class="fa fa-users" aria-hidden="true">
+                  <span style="font-size: 35%; background-color: red;" class="badge badge-danger"> {{friendsNum}}</span>
+                </i>
+               <div class="tooly">Friends</div>
+              </a>
+            </li>
+            <li class="nav-itW∑Wem">
+              <a class="nav-link" href="#">
+                <i class="fa fa-envelope" aria-hidden="true">
+                  <span style="font-size: 35%; background-color: red;" class="badge badge-danger"> {{msgNum}}</span>
+                </i>
+                <div class="tooly">Messages</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/apps">
+                <i class="fa fa-play" aria-hidden="true">
+                </i>
+                <div class="tooly">Apps</div>
+              </a>
+            </li>
+            <form action="/search" method = "post" style="position:absolute; right:50%; top:20%;">
+              <input type="text" placeholder="Search" name = "search" required = "required" />
+              <button><span class="fa fa-search"></span></button>
+            </form>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#"></a>
+                <i class="fa fa-envelope">
+                  <span class="badge badge-warning">11</span>
+                </i>
+                Messages
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-play">
+                </i>
+                Apps
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+          </ul>
+          
+            <div style="position: absolute; right: 0;">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/home/post">
+                      <i class="fa fa-plus-square">
+                      </i>
+                      <div class="tooly">Post</div>
+                    </a>
+                  </li>
+              <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="/profile">
+                  <i class="fa fa-user">
+                  </i>
+                  <div class="tooly">Profile</div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/settings">
+                  <i class="fa fa-cogs">
+                  </i>
+                  <div class="tooly">Settings</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+<br><br><br><br>
+<div class="container">
+    
+<div class="row clearfix">
+    <div class="col-lg-12">
+        <div class="card chat-app">
+            <div id="plist" class="people-list" style="overflow: scroll; height: 650px;">
+                <div class="input-group">
+                
+                   
+                </div>
+                {% for mans in messageGroup %}
+
+                    {% set i = loop.index-1 %}
+                    <a href="/message/{{ messageGroup[i][3] }}">
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li class="clearfix">
+                        {% if messageGroup[i][5] == "data:image/jpeg;base64,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" %}
+                        <img src="{{ messageGroup[i][5] }}" alt="avatar">
+                        {%else%}
+                        <img src="../static/profile/{{ messageGroup[i][5] }}" alt="avatar">
+                        {%endif%}
+                        <div class="about">
+                            <div class="name">{{ messageGroup[i][2] }}</div>
+                            <!-- <div class="status"> <i class="fa fa-circle offline"></i> left 7 mins ago </div> 
+                            <div class="status"> <i class="fa fa-circle online"></i> online </div>                                            -->
+                        </div>
+                    </li>
+                               
+                </ul>
+                </a>
+                {%endfor%}
+                
+            </div>
+            <div class="chat">
+                <div class="chat-header clearfix">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="/profile/{{ol}}" data-toggle="modal" data-target="#view_info">
+                                {% if gic == "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxEHBhERBxASFRISFRcWFhMYFRcWFhgVFRYWFhgbFxYYHSggGB0lHRUTLTEhJSkrLi4uFx8zODMuOigtMCsBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBAwQCB//EAD0QAQABAgMDCAcGBQUBAAAAAAABAgMEBREhMVEGEkFhcYGh0RMUIkKRscEjMjNScuE1YoKS8FOissLiJf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD7GAAAAAAAAAADFUxTGtU6RxBkcF7OLFnfciZ/l9rxjY5auUVqJ9miufhH1BMiFp5R25+9RX4T9XTZzqxdn7/N/VEx47gSI80Vxcp1tzExxidYegAAAAAAAAAAAAAAAAAAAABiZ0jarGc5vOJmaMNOlHTPTV+wO/Mc+pszNOE0qq/N7seav4nF3MVVrfqmerojsjc0gAAAANli/Xh69bFU0z1T8+Kdy/lBzpinHRp/PG7vjo7leAX6mqKqYmmdYndLKo5TmlWBr0r1m3O+OHXHktlu5F23FVudYmNYkHoAAAAAAAAAAAAAAAAGnF34wuGqrq92Ne2eiPjoCG5R5hp9jZn9c/KnzV9m5XNy5NVc6zM6zPXLAAAAAAAAACY5PZh6C96K7Ps1Ts6qvKUOAv448pxXrmBpqq+9Gyrtjz2T3uwAAAAAAAAAAAAAABCcqL/Nw9FEe9Os9lP7z4JtV+U9euPpjhRHjM/sCIAAAAAAAAAAABOclr+l6uiemOdHbGyfnHwWNT8hr5ma2+vWPjTK4AAAAAAAAAAAAAAAKpykj/6f9NP1WtWuVNvTFUVcadP7Z/8AQIUAAAAAAAAAAAHZk0a5pa/V9JXNUuTtvn5pTP5Yqnw0+q2gAAAAAAAAAAAAAAIvlFh/TZfzqd9E6926f86koxVTFdMxVGsTGkx1SCgjozDCzgsXVRVujdPGmd3+dTnAAAAAAAAAB7w9mcRepotb6p0gFg5L4fm2a7lXvTzY7I3+PyTjVhrMYaxTRb3Uxo2gAAAAAAAAAAAAAAAAj84y/wBew/sffp+7PHqlUaqZoqmK40mNkwvyMzbKYxsc61pFzj0VdU+YKmPd+zVh7k03omJjol4AAAAABmiiblcRREzM7ojbIMLRkOW+q2+ffj26o3fljzl5yfJvV5ivFaTX0U74p85TIAAAAAAAAAAAAAAAAAAA811RRTrXMRHGZ0hH4jO7FndVNU8KY18Z2A68VhKMXb0xFMTw4x2T0ILF8naqZ1wlUVR+Wdk/HdPg9XuUkz+BbiOuqdfCHHczy/XuqiOymPrqDlv4K5Y/Gt1R16bPjGxzuurMr1W+7X3Tp8miu9Vc/EqqntmZBrbrOFuX5+xoqnsidPi80XqqPuVTHZMw6KMzv0brtffOvzB24Tk/cuTriZiiOG+ryhO4LAW8FT9hTt6ap2zPerlvPb9H3qqau2mPpo7bPKT/AF7ffTP0nzBYBH4fObF/3+bPCrZ47vF3xOsaxuBkAAAAAAAAAAAAAAEdmma04GNI9qv8vDrqB2371OHt869VERxn/NqCxvKGZnTBU/1VfSnzQ+KxVeLuc6/VrPhHZHQ0g2YjEV4mrW/VNXbPyjoawAAAAAAAAAbsNi7mFn7CuY6uj4bmkBYcFyhirZjadP5o3d8eSct3Iu0RVamJid0xthQnRgsbXgrmtidnTTO6e2AXccWW5lRj6PY2VRvp6e2OMO0AAAAAAAAAHFmuOjAYbX3p2Ux18eyAc+dZr6nTzLP4k/7Y49qrVVTXVM1TrM75Llc3K5quTrMzrM9bAAAAAAAAAAAAAAAAAPVq5Nm5FVqZiY3TC25TmUY+1pVsrjfHHrjqVB7w96rD3ortTpMAvg58Bi6cbhort98cJ6YdAAAAAAAMVTFNOtW6N8qZmeMnHYuavdjZTHCP3TnKTF+hw0W6N9e/9Mec/VWAAAAAAAAAAAAAAAAAAAAASGSY71PF+3PsV7KurhK3qAtuQ4v1rAxFf3qPZns6J+HyBJAAAAA483xHq2XV1RvmObHbVsBVs0xPreOrqjdrpT2Rsjz73KwyAAAAAAAAAAAAAAAAAAAAAkchxPq+YRE7q/Znv3ePzRxE6TsBfxpwd/1nCUVx70RPf0+OrcAAAgOVN/Zbtx11T8o/7J9T89vemzOvTdTpT8N/jqDgAAAAAAAAAAAAAAAAAAAAAAABZuTF7n4Oqifcq8Ktvz1TKq8mr3o8w5s7q6ZjvjbHylagAAea6uZRM1bojX4KHcr9JcmqrfMzPx2rjnN30WWXJ4xp/dMR9VNAAAAAAAAAAAAAAAAAAAAAAAABuwN30GMoq4VR8NdvhqvL5+vOCu+nwdFXGmJ79NoN4AIvlJ/DJ/VT9VUAAAAAAAAAAAAAAAAAAAAAAAAABcck/hVrsn/lLADvAB//2Q==" %}
+                                <img href="/profile/{{ol}}" src="{{ gic }}" alt="avatar">
+                                {%else%}
+                                <img src="../static/profile/{{ gic }}" alt="avatar">
+                                {%endif%}
+                            <div class="chat-about">
+                                <h6 class="m-b-0">{{name}}</h6>
+                                <small>{{theName}}</small>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-lg-6 hidden-sm text-right">
+                            <a href="javascript:void(0);" class="btn btn-outline-info"><i class="fa fa-cogs"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="data" class="chat-history" style = "overflow: scroll; height: 500px;">
+                    <ul class="m-b-0">
+                    {% for msg in messages %}
+                    {%if msg[0] == 2 %}
+                        {% if msg[3] == "img" %}
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">{{msg[2]}}</span>
+                                    <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                                </div>
+                                <div class="message other-message float-right">
+                                <img class="fakeimg" src="../static/posts/{{msg[1]}}" style="height: 200px; width: 200px; background-color: white;">
+                            </div>
+                            </li>
+                            {% elif msg[3] == "vid" %}
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">{{msg[2]}}</span>
+                                    <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                                </div>
+                                <div class="message other-message float-right">
+                                    <video width="200" height="200" controls>
+                                        <source src="/static/posts/{{msg[1]}}" type="video/mp4">
+                                        <source src="/static/posts/{{msg[1]}}" type="video/mov">
+                                        <source src="/static/posts/{{msg[1]}}" type="video/avi">
+                                        <source src="/static/posts/{{msg[1]}}" type="video/quicktime">
+                                      </video>
+                            </div>
+                            </li>
+                        {%else%}
+                            <li class="clearfix">
+                                <div class="message-data text-right">
+                                    <span class="message-data-time">{{msg[2]}}</span>
+                                    <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                                </div>
+                                <div class="message other-message float-right"> {{msg[1]}} </div>
+                            </li>
+                            {%endif%}
+                        {%else%}
+                            {% if msg[3] == "img" %}
+                                <li class="clearfix">
+                                    <div class="message-data text-right">
+                                        <span class="message-data-time">{{msg[2]}}</span>
+                                        <!-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"> -->
+                                    </div>
+                                    <img class="fakeimg" src="../static/posts/{{msg[1]}}" style="height: 200px; width: 200px; background-color: white;">
+                                </li> 
+                            {%else%}
+                                <li class="clearfix">
+                                    <div class="message-data">
+                                        <span class="message-data-time">{{msg[2]}}</span>
+                                    </div>
+                                    <div class="message my-message">
+                                        <!-- <img height="100px" width="100px" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"><br> -->
+                                        {{msg[1]}} </div>                                    
+                                </li>      
+                            {%endif%}                         
+                    {%endif%}
+                    {%endfor%}
+                    </ul>
+                </div>
+                <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                        <a href="javascript:void(0);" class="btn btn-outline-secondary"><i id="imgBtn" class="fi-xnluxl-camera-solid"></i></a>
+                        <a href="javascript:void(0);" class="btn btn-outline-primary"><i id="vidBtn" class="fi-xnluxl-videocamera-solid"></i></a>        
+                        <input id="msg" type="text" class="form-control" placeholder="SEND">  
+                        <form id="ig" enctype="multipart/form-data">  
+                        <div class="input-group-prepend">
+                            <a id="get" onclick="msg({{ol}})" href="/message/{{ol}}" class="input-group-text"><i class="fi-xnluxl-upload-solid"></i></a>
+                            <input style="display: none;" type="file" id="img" name="img" accept="image/*">
+                            <input style="display: none;" type="file" id="vid" name="vid" accept="video/*">
+                        </form>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+<script>
+
+    $("#imgBtn").click(function () {
+        $("#img").trigger('click');
+    });
+
+    $("#vidBtn").click(function () {
+        $("#vid").trigger('click');
+    });
+
+    function msg(id) {
+       msge = document.getElementById("msg").value
+
+    var form_data = new FormData($('#ig')[0],$('#ig')[1]);
+
+    if ((msge != "") || (document.getElementById("vid").value != "") || ( document.getElementById("img").value != "") ) {
+    if (msge == ""){
+
+    $.ajax({
+    type: 'POST',
+    url: "/sendMessage/"+id+"/"+"SECRETCODEkjadnfjasdnfnsadfnaksdkflnsdamfklasdmfklsdamfaksdmfnlsadfa",
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+     success: function(data){
+    }});}
+else{
+    $.ajax({
+    type: 'POST',
+    url: "/sendMessage/"+id+"/"+msge,
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+     success: function(data){
+    }});
+}}}
+
+    var elem = document.getElementById('data');
+    elem.scrollTop = elem.scrollHeight;
+
+    var input = document.getElementById("msg");
+    input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("get").click();
+    document.location.reload()
+  }
+});
+var pusher = new Pusher('a5fb9bca92914681546d', {
+  cluster: 'us2'
+});
+
+var channel = pusher.subscribe('msg-channel');
+channel.bind('new-message', function(data) {
+  if (data.userID == '{{ml}}'){
+    $("#data").append(`
+                            <div class="message-data">
+                                <span class="message-data-time">${data.time}</span>
+                            </div>
+                            <div class="message my-message">
+                                <!-- <img height="100px" width="100px" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar"><br> -->
+                                 ${data.message} </div>                                    
+                          `)
+    var elem = document.getElementById('data');
+    elem.scrollTop = elem.scrollHeight;
+
+  }
+});
+</script>
+</html>

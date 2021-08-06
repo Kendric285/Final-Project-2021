@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>HOMEPAGE</title>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+          <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+          <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+          <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+				</head>
+        <style>
+          .nav-link{
+            color: #c3b18c;
+          }
+          .nav-link:hover{
+            color: #b8a785;
+          }
+          .tooly{
+            display: none;
+          }
+          .nav-link:hover .tooly{
+            display: block
+          }
+          @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  position: relative;
+  width: 36px;
+  font-size: 24px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 0;
+  font-family: sans-serif;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  top: 3px;
+  line-height: 12px;
+}
+
+.navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
+  top: -10px;
+}
+
+@media (min-width: 576px) {
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 48px;
+    margin: 2px auto 4px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+  .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
+    top: -7px;
+    
+  }
+}
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.post .post-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+.post .post-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+.post .post-heading .meta .title {
+  margin-bottom: 0;
+}
+.post .post-heading .meta .title a {
+  color: black;
+}
+.post .post-heading .meta .title a:hover {
+  color: #aaaaaa;
+}
+.post .post-heading .meta .time {
+  margin-top: 8px;
+  color: #999;
+}
+.post .post-image .image {
+  width: 100%;
+  height: auto;
+}
+.post .post-description {
+  padding: 15px;
+}
+.post .post-description p {
+  font-size: 14px;
+}
+.post .post-description .stats {
+  margin-top: 20px;
+}
+.post .post-description .stats .stat-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.post .post-description .stats .stat-item .icon {
+  margin-right: 8px;
+}
+.post .post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.post .post-footer .input-group-addon a {
+  color: #454545;
+}
+.post .post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.post .post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post .post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+}
+.post .post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post .post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post .post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post .post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post .post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+
+          .dropbtn {
+background-color: #04AA6D;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+}
+
+.dropdown {
+position: relative;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+                      .menu-bar {
+                        border-radius: 25px;
+                        height: -webkit-fit-content;
+                        height: -moz-fit-content;
+                        height: fit-content;
+                        display: inline-flex;
+                        background-color: rgba(0, 0, 0, 0.4);
+                        -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                        align-items: center;
+                        padding: 0 10px;
+                        margin: 50px 0 0 0;
+                      }
+                      .menu-bar li {
+                        list-style: none;
+                        color: white;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                        padding: 12px 16px;
+                        margin: 0 8px;
+                        position: relative;
+                        cursor: pointer;
+                        white-space: nowrap;
+                      }
+                      .menu-bar li::before {
+                        content: " ";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        z-index: -1;
+                        transition: 0.2s;
+                        border-radius: 25px;
+                      }
+                      .menu-bar li:hover {
+                        color: black;
+                      }
+                      .menu-bar li:hover::before {
+                        background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+                        box-shadow: 0px 3px 20px 0px black;
+                        transform: scale(1.2);
+                      }
+                      * {
+                      box-sizing: border-box;
+                      }
+
+                      /* Add a gray background color with some padding */
+                      body {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        padding: 20px;
+                        background: #f1f1f1;
+                      }
+
+                      /* Header/Blog Title */
+                      .header {
+                        padding: 30px;
+                        font-size: 40px;
+                        text-align: center;
+                        background: white;
+                      }
+
+                      /* Create two unequal columns that floats next to each other */
+                      /* Left column */
+                      .leftcolumn {
+                        float: center;
+                        width: 50%;
+                      }
+
+                      /* Right column */
+                      .rightcolumn {
+                        float: left;
+                        width: 25%;
+                        padding-left: 20px;
+                      }
+
+                      /* Fake image */
+                      .fakeimg {
+                        background-color: #aaa;
+                        width: 100%;
+                        padding: 20px;
+                      }
+
+                      /* Add a card effect for articles */
+                      .card {
+                         background-color: white;
+                         padding: 20px;
+                         margin-top: 20px;
+                         border-radius: 4px;
+                      }
+
+                      /* Clear floats after the columns */
+                      .row:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                      }
+
+                      /* Footer */
+                      .footer {
+                        padding: 20px;
+                        text-align: center;
+                        background: #ddd;
+                        margin-top: 20px;
+                      }
+
+                      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+                      @media screen and (max-width: 800px) {
+                        .leftcolumn, .rightcolumn {
+                          width: 100%;
+                          padding: 0;
+                        }
+                      }
+        </style>
+				<center>
+          <nav class="navbar navbar-icon-top navbar-expand-lg" style="background-color: white; position:fixed; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; height: 7%; width: 100%; left: 0; top: 0;">
+            <a style="color: #c3b18c;" class="navbar-brand" href="#">&nbsp; Hoots<img src="https://1000logos.net/wp-content/uploads/2017/08/OVO-Logo.png" height=50px></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/home">
+                    <i class="fa fa-home"></i>
+                    <div class="tooly">Home</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/friends">
+                    <i class="fa fa-users" aria-hidden="true">
+                      <span style="font-size: 35%; background-color: red;" class="badge badge-danger"> {{friendsNum}}</span>
+                    </i>
+                   <div class="tooly">Friends</div>
+                  </a>
+                </li>
+                <li class="nav-itW∑Wem">
+                  <a class="nav-link" href="/messages">
+                    <i class="fa fa-envelope" aria-hidden="true">
+                      <span style="font-size: 35%; background-color: red;" class="badge badge-danger"> {{msgNum}}</span>
+                    </i>
+                    <div class="tooly">Messages</div>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/apps">
+                    <i class="fa fa-play" aria-hidden="true">
+                    </i>
+                    <div class="tooly">Apps</div>
+                  </a>
+                </li>
+                <form action="/search" method = "post" style="position:absolute; right:50%; top:20%;">
+                  <input type="text" placeholder="Search" name = "search" required = "required" />
+                  <button><span class="fa fa-search"></span></button>
+                </form>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#"></a>
+                    <i class="fa fa-envelope">
+                      <span class="badge badge-warning">11</span>
+                    </i>
+                    Messages
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-play">
+                    </i>
+                    Apps
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+              </ul>
+              
+                <div style="position: absolute; right: 0;">
+                    <ul class="navbar-nav ">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/home/post">
+                          <i class="fa fa-plus-square">
+                          </i>
+                          <div class="tooly">Post</div>
+                        </a>
+                      </li>
+                  <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile">
+                      <i class="fa fa-user">
+                      </i>
+                      <div class="tooly">Profile</div>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/settings">
+                      <i class="fa fa-cogs">
+                      </i>
+                      <div class="tooly">Settings</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    <br><br>
+             <!--      <form style="background-color: #aaa; width: 50%; text-align: left;" action="/home" method="POST" enctype="multipart/form-data">
+                        <label for="img">Select Image:</label>
+                        <input type="file" id="img" name="img" accept="image/*"><br>
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required><br>
+                        <label for="description" required>Description:</label>
+                        <input type="text" id="description" name="description" ><br>
+                        <input type="submit">
+                      </form>-->
+
+
+        <!-- {% if not posts %}
+
+            <p>POSTLESS HOOTERS</p>
+
+        {% endif %}
+
+        {% if posts %}
+        {% set poster = [] %}
+          {% for post in posts%}
+          {% set i = loop.index-1 %}
+            {% if posts[i][0] != "" %}
+
+                    <div class="row">
+                        <div class="leftcolumn">
+                        <div class="card">
+                          <div style="display: inline; width: 100%; height: 1px;">
+                            <div class="dropdown">
+                              <h1 type="button" style = "color: black; text-decoration: none; float: right; background-color: transparent; top: 50;" class="dropbtn">...</h1>
+                              <div style="border-radius: 12px; right:0;" class="dropdown-content">
+                                <a style="color: red;" href="/">REPORT</a>
+                                <a href="/">Repost</a>
+                                <a href="/">Cancel</a>
+                              </div>
+                            </div>
+                            {% if posts[i][9] == "data:image/jpeg;base64,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" %}
+                            <a href = "/profile/{{posts[i][8]}}"><img style="float: left; height:50px; width:50px; border-radius: 360%;" src="{{ posts[i][9] }}"></a>
+                            {%else%}
+                            <a href = "/profile/{{posts[i][8]}}"><img style="float: left; height:50px; width:50px; border-radius: 360%;" src="../static/profile/{{ posts[i][9] }}"></a>
+                            {%endif%}
+                            <p class="name" style="float: top; text-align: left; border-bottom:1px solid rgb(0, 0, 0); width: 100%; height: 50px;"> &nbsp {{ posts[i][3] }}</p>
+                            
+                          </div>
+
+                            <h2 class="title">{{ posts[i][1] }}</h2>
+                            <h5 class="date" >{{ posts[i][10] }}</h5>
+                            <img class="fakeimg" src="../static/posts/{{ posts[i][0] }}" style="height: 400px; background-color: white;">
+                            <button style="float: left;" class="likes" id="{{posts[i][2]}}" type="{{posts[i][5]}}" onclick="likes('{{posts[i][2]}}',{{posts[i][6]}},'{{posts[i][5]}}','{{email}}')">Likes: {{ posts[i][6] }}</button>
+                            <br><br><br>
+                            <button style="float: left;" class="view_comments" onclick="showComments('commento{{i}}')" style="text-align: left;">View Comments</button>
+                            <br><br>
+                            <div style="display: none; overflow: scroll; height: 100px; text-align: left;" class="comments" id="commento{{i}}">
+
+
+                              <div id="comment-{{i}}"></div>
+                              {% for comment in comments %}
+                                {% set ii = loop.index-1 %}
+                                  {% if i==i%}
+                                  {% if comments[ii][0] == posts[i][2] %}
+
+                                    <p style="font-size: 12px;"><strong>{{ comments[ii][1] }}</strong> {{ comments[ii][2] }} ({{comments[ii][3]}})</p>
+
+                                  {%endif%}
+                                  {%endif%}
+                              {%endfor%}
+
+                            </div>
+                            <div style="position: absolute;"><label for="comment" required>Comment:</label><input class="comment" type="text" id="comment{{i}}" name="comment" ><input class="commentButton" onclick='setNameId("{{ posts[i][2] }}","{{ name }}", "comment{{i}}","comment-{{i}}")' type="submit">
+                            </div><br>
+                        </div>
+                        </div>
+                    </div>
+
+
+                    {% else %}
+
+                    <div class="row" >
+                        <div class="leftcolumn">
+                        <div class="card" style="text-align: left;">
+                          <div style="display: inline; width: 100%; height: 1px;">
+                            <h2 type="button" style="float: right;">...</h2>
+                           {% if posts[i][9] == "data:image/jpeg;base64,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" %}
+                            <a href = "/profile/{{posts[i][8]}}"><img style="float: left; height:50px; width:50px; border-radius: 360%;" src="{{ posts[i][9] }}"></a>
+                            {%else%}
+                            <a href="/profile/{{posts[i][8]}}"><img style="float: left; height:50px; width:50px; border-radius: 360%;" src="../static/profile/{{ posts[i][9] }}"></a>
+                            {%endif%}
+                            <p class="name" style="float: top; text-align: left; border-bottom:1px solid rgb(0, 0, 0); width: 100%; height: 50px;"> &nbsp {{ posts[i][3] }}</p>
+                            
+                            </div>
+                            
+                            <h2 class="title">{{ posts[i][1] }}</h2>
+                            <h5 class="date" >{{ posts[i][10] }}</h5>
+                            <p style="background-color: #aaa;" class="description">{{ posts[i][4] }}</p>
+                            <button class="likes" id="{{posts[i][2]}}" type="{{posts[i][5]}}" onclick="likes('{{posts[i][2]}}',{{posts[i][6]}},'{{posts[i][5]}}','{{email}}')">Likes: {{ posts[i][6] }}</button>
+                            <br><br><button onclick="showComments('commento{{i}}')" class="view_comments">View Comments</button><br><br>
+                            <div style="display: none; overflow: scroll; height: 100px;" class="comments" id="commento{{i}}">
+
+                              <div id="comment-{{i}}"></div>
+                              {% for comment in comments %}
+                                {% set ii = loop.index-1 %}
+                                  {% if i==i%}
+                                  {% if comments[ii][0] == posts[i][2] %}
+
+                                    <p style="font-size: 12px;"><strong>{{ comments[ii][1] }}</strong> {{ comments[ii][2] }} ({{comments[ii][3]}})</p>
+
+                                  {%endif%}
+                                  {%endif%}
+                              {%endfor%}
+
+                            </div>
+                            <div style="position: absolute;"><label for="comment" required>Comment:</label><input class="comment" type="text" id="comment{{i}}" name="comment" ><input class="commentButton" onclick='setNameId("{{ posts[i][2] }}","{{ name }}", "comment{{i}}","comment-{{i}}")' type="submit">
+                            </div><br>
+                        </div>
+                        </div>
+                    </div>
+
+                {%endif%}
+          {%endfor%}
+
+        {% endif %} -->
+
+  <!--
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div> -->
+
+<div id="scroller" class="mb-3" style="overflow: scroll; right:2%; width: 50%; position:absolute;">
+
+  <!-- template schema, hidden from the dom -->
+  <template id="post_template">
+
+    <div class="container bootstrap snippets bootdey">
+      <div class="col-sm-8">
+          <div class="panel panel-white post panel-shadow" style="text-align: left;">
+            <div class="dropdown">
+              <h1 type="button" style = "color: black; text-decoration: none; float: right; background-color: transparent; top: 50; font-size: 30px;" class="dropbtn">...</h1>
+              <div style="border-radius: 12px; right:0;" class="dropdown-content">
+                <a style="color: red;" href="/">REPORT</a>
+                <a href="/">Repost</a>
+                <a href="/">Cancel</a>
+              </div>
+            </div>  
+            <div class="post-heading">
+                  <div class="pull-left image" id="profPic">
+                     
+                  </div>
+                  <div class="pull-left meta">
+                      <div class="title h5">
+                          <a><b id="name"></b></a>
+                          made a post. <h6 id="date" style="display: inline;" class="text-muted time"></h6>
+                      </div>
+                      <div id="title" style="font-size: 30px;"></div>
+                  </div>
+              </div> 
+              <hr> 
+              <div id="img"></div>
+              <div class="post-description"> 
+                  <p id="description"></p>
+                  <div class="stats">
+                      <a id="likes" class="btn btn-default stat-item">
+                          <i class="fa fa-thumbs-up icon"></i>2
+                      </a>
+                      <a id="commentsNum" class="btn btn-default stat-item">
+                        <i class="fa fa-comments icon"></i>12
+                    </a>
+                      <a class="btn btn-default stat-item">
+                          <i class="fa fa-share icon"></i>nil
+                      </a>
+                  </div>
+              </div>
+              <div class="post-footer" >
+                <div style="display: inline;" id="showComments" height="2px"></div>
+              <div id="commentTag" style="display: inline; width: 77%;"></div>
+                    <div style="display: inline;" id="commentButton"></div>
+                  <ul id="commento" class="comments-list" style="display: none; overflow: scroll; height: 100px; text-align: left;">
+                      <li class="comment">
+                          <!-- <a class="pull-left" >
+                              <img class="avatar" src="https://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                          </a>
+                          <div class="comment-body">
+                              <div class="comment-heading">
+                                  <h4 class="user">Gavino Free</h4>
+                                  <h5 class="time">5 minutes ago</h5>
+                              </div>
+                              <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
+                          </div> -->
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <br><br><br>
+
+  </template>
+
+<!-- element to trigger the IntersectionObserver -->
+<sd class="d-flex justify-content-center mb-3" id="sentinel">
+  <i class="fi-xnsdsl-loading"></i>
+</sd>
+</div>
+<div style="width: 50%; left: 2%; overflow: scroll; position:absolute;">
+
+{%for profile in profiles%}
+<div class="row py-5 px-4">
+  <div class="col-xl-4 col-md-6 col-sm-10 mx-auto">
+
+      <!-- Profile widget -->
+      <div class="bg-white shadow rounded overflow-hidden" style="width: 200%; position: relative; right: 47.5%">
+          <div class="px-4 pt-0 pb-4 bg-dark">
+              <div class="media align-items-end profile-header">
+                  {% if profile[2] == "data:image/jpeg;base64,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" %}
+                  <div class="profile mr-3"><img src="{{profile[2]}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+                  {%else%}
+                  <div class="profile mr-3"><img src="../static/profile/{{profile[2]}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+                  {%endif%}
+                  <div class="media-body mb-5 text-white">
+                   
+                  <a href="/profile/{{profile[3]}}"><h4 >{{profile[0]}}</h4></a>
+                      
+                  </div>
+              </div>
+          </div>
+
+          
+         <a style="float: right;" href="/messages" class="button" onclick="message('{{profile[1]}}')">MESSAGE</a>
+              
+          </div>
+      </div><!-- End profile widget -->
+{%endfor%}
+
+
+</div>
+
+<script>
+
+var scroller = document.querySelector("#scroller");
+var template = document.querySelector('#post_template');
+var sentinel = document.querySelector('#sentinel');
+
+// Set a counter to count the items loaded
+var counter = 0;
+var datar = []
+var iGrow = -1
+
+function follow(name) {
+    $.ajax({url: "/follow/" + name, success: function(result){
+    }});}
+    function friend(name) {
+    $.ajax({url: "/friends/" + name, success: function(result){
+    }});}
+    function message(name) {
+    $.ajax({url: "/messages/" + name, success: function(result){
+    }});}
+// Function to request new items and render to the dom
+function loadItems() {
+
+  // Use fetch to request data and pass the counter value in the QS
+  fetch(`/load3?c=${counter}`).then((response) => {
+    fetch(`/load2?c=${counter}`).then((response2) => {
+    // Convert the response data to JSON
+    response.json().then((data) => {
+    response2.json().then((data2) => {
+      // If empty JSON, exit the function
+      if (!data.length) {
+
+        // Replace the spinner with "No more posts"
+        sentinel.innerHTML = "No more posts or accounts found";
+        return;
+      }
+
+      // Iterate over the items in the response
+      for (var i = 0; i < data.length; i++) {
+        datar.push(data[i])
+        iGrow=iGrow+1
+        // Clone the HTML template
+        let template_clone = template.content.cloneNode(true);
+
+        // Query & update the template content
+        if (data[i][9] == "data:image/jpeg;base64,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") {
+          template_clone.querySelector("#profPic").innerHTML = `<a href="/profile/${data[i][11]}"><img src="${data[i][9]}" class="img-circle avatar" alt="user profile image"></a>`
+        } else { template_clone.querySelector("#profPic").innerHTML = `<a href="/profile/${data[i][11]}"><img src="../static/profile/${data[i][9]}" class="img-circle avatar" alt="user profile image"></a>`; }
+        template_clone.querySelector("#name").innerHTML = `<a style="text-decoration: none;" href="/profile/${data[i][11]}">${data[i][3]}</a>`;
+        template_clone.querySelector("#title").innerHTML = `<strong>${data[i][1]}</strong>`;
+        template_clone.querySelector("#description").innerHTML = `${data[i][4]}`;
+        template_clone.querySelector("#date").innerHTML = `${data[i][10]}`;
+        template_clone.querySelector("#likes").innerHTML = `<a style="text-decoration: none;" class="likes" onclick="likes('${data[i][2]}','likes${iGrow}','${data[i][5]}','{{email}}',${data[i][6]})" class="btn btn-default stat-item"><i class="fa fa-thumbs-up icon"></i><div style="display: inline;" id="likes${iGrow}">${data[i][6]}</div></a>`;
+        template_clone.querySelector("#commentsNum").innerHTML = ` <i class="fa fa-comments icon"></i>${data[i][7]} `
+        template_clone.querySelector("#showComments").innerHTML = `<button onclick="showComments('commento${iGrow}')" height="2px">View Comments</button>`
+        template_clone.querySelector("#commentTag").innerHTML = `<input style="display: inline; width: 77%;"  class="form-control" minlength="2" maxlength="200" placeholder="Add a comment" type="text" id="pureComment${iGrow}">`
+        template_clone.querySelector("#commentButton").innerHTML = `&nbsp <button style="border: none; font-size: 25px" id="commentButton${iGrow}" style="font-size: 30px; display: inline;" class="fa fa-comment" onclick='setNameId("${data[i][2]}","{{ name }}","pureComment${iGrow}","commento${iGrow}","{{ profilePic[0][0] }}"); doComment()'></button>`
+        template_clone.querySelector("#commento").id = `commento${iGrow}`
+        for (ii in data2) {
+          if (data2[ii][0] == data[i][2]){
+            console.log(data2[ii][5])
+            wow = template_clone.querySelector(`#commento${iGrow}`).innerHTML
+            if (data2[ii][5] == "!0") {
+            template_clone.querySelector(`#commento${iGrow}`).innerHTML = wow+
+            ` <li class="comment">i
+                          <a class="pull-left" >
+                              <img class="avatar" src="data:image/jpeg;base64,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" alt="avatar">
+                          </a>
+                          <div class="comment-body">
+                              <div class="comment-heading">
+                                  <h4 class="user">${data2[ii][1]}</h4>
+                                  <h5 class="time">${data2[ii][3]}</h5>
+                              </div>
+                              <p>${data2[ii][2]}</p>
+                          </div>
+                      </li>`
+                    } else {
+                      template_clone.querySelector(`#commento${iGrow}`).innerHTML = wow+
+            ` <li class="comment">
+                          <a class="pull-left" >
+                              <img class="avatar" src="../static/profile/${data2[ii][5]}" alt="avatar">
+                          </a>
+                          <div class="comment-body">
+                              <div class="comment-heading">
+                                  <h4 class="user">${data2[ii][1]}</h4>
+                                  <h5 class="time">${data2[ii][3]}</h5>
+                              </div>
+                              <p>${data2[ii][2]}</p>
+                          </div>
+                      </li>`
+                    }
+          }
+        }
+        
+
+        
+        if (data[i][0] != "") { 
+          template_clone.querySelector("#description").style = `text-align: center;` 
+          if (data[i][12]=="img") {
+          template_clone.querySelector("#img").innerHTML = `<center><img class="fakeimg" src="../static/posts/${data[i][0]}" style="height: 500px; width: 80%; background-color: white;"></center>`; }
+          } 
+          if (data[i][12]=="vid") {
+          template_clone.querySelector("#img").innerHTML = `<center><video width="430" height="250" controls>
+            <source src="/static/posts/${data[i][0]}" type="video/mp4">
+            <source src="/static/posts/${data[i][0]}" type="video/mov">
+          </video></center>`;}
+        // template_clone.querySelector("#title").innerHTML = `${data[i][0]}: ${data[i][1]}`;
+       // template_clone.querySelector("#content").innerHTML = data[i][2];
+
+        // Append template to dom
+        scroller.appendChild(template_clone);
+
+        // Increment the counter
+        counter += 1;
+
+        // Update the counter in the navbar
+        // loaded.innerText = `${counter} items loaded`;
+        
+      }
+    })
+  })
+  })
+  })
+}
+
+// Create a new IntersectionObserver instance
+var intersectionObserver = new IntersectionObserver(entries => {
+
+  // Uncomment below to see the entry.intersectionRatio when
+  // the sentinel comes into view
+
+  // entries.forEach(entry => {
+  //   console.log(entry.intersectionRatio);
+  // })
+
+  // If intersectionRatio is 0, the sentinel is out of view
+  // and we don't need to do anything. Exit the function
+  if (entries[0].intersectionRatio <= 0) {
+    return;
+  }
+
+  // Call the loadItems function
+  loadItems();
+
+});
+
+// Instruct the IntersectionObserver to watch the sentinel
+intersectionObserver.observe(sentinel);
+
+  i=1;
+  
+    function likes(post,likes,check,email,ii){
+        if (check.includes(email) && i==1){
+            i=2
+        }
+        if (check.includes(email)==false && i==2){
+          i=1
+        }
+        // $( "#"+likes ).load(window.location.href + " #"+likes );
+        // document.getElementById(likes).innerHTML = `<a style="text-decoration: none;" class="likes" id="likes${i}" onclick="likes('${datar[ii][2]}','likes${i}','${datar[ii][5]}','{{email}}')" class="btn btn-default stat-item"><i class="fa fa-thumbs-up icon"></i>${datar[ii][6]}</a>`
+
+        //document.getElementById(likes).innerHTML = ii;
+
+        if (i==2){
+          if (document.getElementById(likes).innerHTML == ii) {
+          document.getElementById(likes).innerHTML = (ii-1);
+          } else {document.getElementById(likes).innerHTML = (ii);}
+        } else {
+          if (document.getElementById(likes).innerHTML == ii){
+          document.getElementById(likes).innerHTML = (ii+1);}
+          else{document.getElementById(likes).innerHTML = (ii);}
+        }
+        ajax_follow(post)
+    }
+
+    function ajax_follow(name) {
+    $.ajax({url: "/like/" + name, success: function(result){
+    }});}
+
+    id = ""
+    name = ""
+    cum = ""
+    its = ""
+    prof = ""
+
+    function setNameId(ide,nom,com,oke,piky){
+      id = ide;
+      name = nom;
+      cum = com;
+      its = oke;
+      prof = piky;
+      if (prof=="data:image/jpeg;base64,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") {prof="!0"}
+    }
+
+
+    function comment(comment) {
+    $.ajax({url: "/comment/"+comment+"/"+id+"/"+prof, success: function(result){
+    }});}
+
+    function doComment(){
+            var value = $("#"+cum).val();
+            comment(value)
+            if (prof == "!0") {
+              $("#"+its).append(
+              ` <li class="comment">
+                          <a class="pull-left" >
+                              <img class="avatar" src="data:image/jpeg;base64,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" alt="avatar">
+                          </a>
+                          <div class="comment-body">
+                              <div class="comment-heading">
+                                  <h4 class="user">${name}</h4>
+                                  <h5 class="time">(just commented)</h5>
+                              </div>
+                              <p>${value}</p>
+                          </div>
+                      </li>`)
+                    } else {
+                      $("#"+its).append(
+              `<li class="comment">
+                          <a class="pull-left" >
+                              <img class="avatar" src="../static/profile/${prof}" alt="avatar">
+                          </a>
+                          <div class="comment-body">
+                              <div class="comment-heading">
+                                  <h4 class="user">${name}</h4>
+                                  <h5 class="time">(just commented)</h5>
+                              </div>
+                              <p>${value}</p>
+                          </div>
+                      </li>`)
+                    }
+
+    }
+
+    function showComments(stuff){
+        if ($("#"+stuff).is(":hidden")){
+          $("#"+stuff).show();
+        } else {
+          $(document).ready(function () {
+          $("#"+stuff).hide();
+        });
+        }
+
+    }
+
+  </script>
+
+				</body>
+                </center>
+			</html>
